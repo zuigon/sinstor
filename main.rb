@@ -1,22 +1,16 @@
 require "rubygems"
 require "sinatra"
-
 require "haml"
-
 require 'sequel'
 require 'mongo'
-
 require 'active_support/secure_random'
-
-include Mongo
-
+# include Mongo
 # configure do
   # db = Connection.new.db('sinstordb')
   # users = db.collection('users')
   # buckets = db.collection('buckets')
 # end
 
-require 'sequel'
 db = Sequel.connect "sqlite://db.sqlite"
 
 require "data/models"
@@ -124,7 +118,7 @@ __END__
 !!! Strict
 %html
   %head
-    %title Vyatta PortMan
+    %title SinatraStoreApp
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     //= "<style type='text/css'>#{css}</style>"
 
