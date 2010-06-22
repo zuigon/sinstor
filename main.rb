@@ -142,18 +142,18 @@ __END__
 = @out
 
 
-@@ list_users
-%h2= "NAT Rules (za #{@router})"
-#list
-  - @rules.each do |rule|
-    %h3.title
-      - rule_id = rule[0]
-      %a{:href=>"/del?id=#{rule_id}"} [DEL]
-      = "#{rule_id}: #{if rule[1]["desc"]!=""; rule[1]["desc"] else; "<i>untitled</i>" end}"
-    %p= "0.0.0.0:#{rule[1]["port_sa"]||rule[1]["port"]} -> #{rule[1]["host"]}:#{rule[1]["port_na"]||rule[1]["port"]}"
-  %font{"size"=>"+2"}
-    %a{btn_pri} Primjeni
-    |
-    %a{btn_dod} Dodaj
+# @@ list_users
+# %h2= "NAT Rules (za #{@router})"
+# #list
+#   - @rules.each do |rule|
+#     %h3.title
+#       - rule_id = rule[0]
+#       %a{:href=>"/del?id=#{rule_id}"} [DEL]
+#       = "#{rule_id}: #{if rule[1]["desc"]!=""; rule[1]["desc"] else; "<i>untitled</i>" end}"
+#     %p= "0.0.0.0:#{rule[1]["port_sa"]||rule[1]["port"]} -> #{rule[1]["host"]}:#{rule[1]["port_na"]||rule[1]["port"]}"
+#   %font{"size"=>"+2"}
+#     %a{btn_pri} Primjeni
+#     |
+#     %a{btn_dod} Dodaj
 
 
